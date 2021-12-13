@@ -22,6 +22,10 @@ public class Combo extends Custom<String>{
         this.value = (String) value;
     }
 
+    public void setIndex(int index){
+        this.set(possible.get(index));
+    }
+
     public void cycle() {
         int next = getIndex() + 1;
         if (next >= possible.size()) next = 0;

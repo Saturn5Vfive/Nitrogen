@@ -8,6 +8,10 @@ import net.nitrogen.config.Type;
 import net.nitrogen.config.conf.*;
 
 public class ClickGuiModule extends Module{
+    Bool thetest = this.settings.add("Boolean_Test", false);
+    Combo thetess = this.settings.add("Combo_Test", "Combo", "Box", "Is", "Kinda", "Cool");
+    Slider theslider = this.settings.add("Slider_Test", 1, 10, 1000, 1);
+
     public ClickGuiModule(){
         super("ClickGUI", "gooey clicks", Type.RENDER);
     }
