@@ -16,8 +16,7 @@ public class Slider extends Custom<Double>{
 
     @Override
     public void set(Object value) {
-        if (!(value instanceof Double)) return;
-        this.value = MathHelper.clamp((double) value, min, max);
+        this.value = (double) value;
     }
 
     public double getMin() {

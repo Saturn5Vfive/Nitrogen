@@ -6,6 +6,7 @@ import java.util.List;
 public class Combo extends Custom<String>{
     List<String> possible;
 
+
     public Combo(String key, String value, String... values) {
         super(key, value);
         this.possible = Lists.newArrayList(values);
@@ -20,16 +21,6 @@ public class Combo extends Custom<String>{
         if (!(value instanceof String)) return;
         if (!possible.contains(value)) return;
         this.value = (String) value;
-    }
-
-    public void setIndex(int index){
-        this.set(possible.get(index));
-    }
-
-    public void cycle() {
-        int next = getIndex() + 1;
-        if (next >= possible.size()) next = 0;
-        this.set(possible.get(next));
     }
 
     public List<String> values() {
